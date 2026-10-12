@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "mysql_analysis": {
+      "type": "stdio",
+      "command": "cmd.exe",
+      "args": ["/d", "/s", "/c", "call", "${CLAUDE_PLUGIN_ROOT}/scripts/start_mcp.cmd"],
+      "env_vars": ["MYSQL_ANALYSIS_PROJECT"]
+    }
+  }
+}

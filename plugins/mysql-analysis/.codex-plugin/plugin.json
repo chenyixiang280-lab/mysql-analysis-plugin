@@ -1,0 +1,16 @@
+{
+  "name": "mysql-analysis",
+  "version": "0.1.0",
+  "description": "四业务库的只读结构查询、业务规则对照与固定样例。Windows 本地 MCP。",
+  "author": { "name": "chenyixiang280-lab" },
+  "repository": "https://github.com/chenyixiang280-lab/mysql-analysis-plugin",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "MySQL 只读分析",
+    "shortDescription": "四业务库结构、业务规则与固定样例",
+    "developerName": "chenyixiang280-lab",
+    "category": "Productivity",
+    "capabilities": ["Read"]
+  }
+}

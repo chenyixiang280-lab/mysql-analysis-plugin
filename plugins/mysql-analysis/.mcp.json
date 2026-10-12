@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mysql_analysis": {
+      "command": "cmd.exe",
+      "args": ["/d", "/s", "/c", "call", "${CLAUDE_PLUGIN_ROOT}/scripts/start_mcp.cmd"],
+      "env_vars": ["MYSQL_ANALYSIS_PROJECT"]
+    }
+  }
+}
