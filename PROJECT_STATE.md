@@ -10,4 +10,4 @@
 - 真实CMD启动、MCP握手与四工具发现通过；结构响应business_context.status=current。目录与样例缓存哈希保持不变，新增业务读取0行。
 - Codex CLI实际发现mysql-analysis@mysql-analysis-private；本轮未安装到当前用户插件缓存。
 - 服务三个模块与原项目逐字节一致；发布文件已检查，快照、样例、审计与凭据均排除。机器证据由verify_package.py生成。
-- GitHub上传状态以实际命令结果为准。
+- GitHub仓库已创建并读回确认PRIVATE：[mysql-analysis-plugin](https://github.com/chenyixiang280-lab/mysql-analysis-plugin)。main已推送，远程提交与本地一致。

@@ -2,6 +2,8 @@
 
 私有 GitHub 插件包：`mysql-analysis`，市场名 `mysql-analysis-private`。包含 `mysql-business-rules` 技能和本地 stdio MCP `mysql_analysis`。
 
+[私有仓库](https://github.com/chenyixiang280-lab/mysql-analysis-plugin) · [v0.1.0发布包](https://github.com/chenyixiang280-lab/mysql-analysis-plugin/releases/tag/v0.1.0)
+
 ## 能力与边界
 
 - `list_databases`：四个获准业务库与结构快照时间。

@@ -25,8 +25,13 @@ def local_hashes(project):
 
 
 async def verify(project):
-    files = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'],
-                                    cwd=ROOT).decode('utf-8').split('\0')
+    if (ROOT / '.git').exists():
+        files = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'],
+                                        cwd=ROOT).decode('utf-8').split('\0')
+    else:
+        files = [str(path.relative_to(ROOT)) for path in ROOT.rglob('*') if path.is_file()
+                 and path.name != 'verification.json'
+                 and not {'__pycache__', '.pytest_cache'}.intersection(path.parts)]
     files = sorted(set(filter(None, files)))
     forbidden = {'state', 'outputs', 'knowledge', '.venv', 'node_modules', '__pycache__', '.git'}
     secrets = re.compile(r'github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|'
